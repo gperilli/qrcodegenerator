@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>QR Code Generator</title>
+    <meta name="description" content="A simple QR code generator.">
+    <meta name="author" content="Gareth Perilli">
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      .QRCode-generator-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+      }
+
+      #qr-code-output {
+        height: 116px;
+        width: 116px;
+        border: 1px solid blue;
+      }
+
+      .QRCode-generator-container > h1,
+      .QRCode-generator-container > input,
+      .QRCode-generator-container > canvas {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="QRCode-generator-container">
+      <h1>QR Code Generator</h1>
+      <input type="text" id="qr-code-text-input"></input>
+      <button id="export-btn">Export as Image</button>
+      <canvas id="qr-code-output"></canvas>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
